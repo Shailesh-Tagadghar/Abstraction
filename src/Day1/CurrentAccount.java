@@ -1,7 +1,7 @@
 package Day1;
 
 class CurrentAccount extends Account{
-  int creaditLimit = 50000;
+  int creditLimit = 50000;
   @Override
   void withdraw(int amt){
       balance -= amt;

@@ -22,6 +22,15 @@ public abstract class Account {
 	    }
 }
 
+class CurrentAccount extends Account{
+  int creditLimit = 50000;
+  @Override
+  void withdraw(int amt){
+      balance -= amt;
+      System.out.println("The updated balance after withdrawal : "+balance);
+  }
+}
+
 //1. if there is a abstract method within class then the class must be defined as abstract
 //2. we can't create object of abstract method
 //3. the child class of the abstract class must override all the abstract methods of parent class.
@@ -29,11 +38,6 @@ public abstract class Account {
 //4. else define the child class
 //Why?
 
-class CurrentAccount extends Account{
-  int creaditLimit = 50000;
-  @Override
-  void withdraw(int amt){
-      balance -= amt;
-      System.out.println("The updated balance after withdrawal : "+balance);
-  }
-}
+//Types :
+//1. Partial (abstract class) and full
+//partial abstraction - instance var, constructor, concrete methods, 
