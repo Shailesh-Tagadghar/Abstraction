@@ -15,7 +15,8 @@ public abstract class Account {
 	    
 	    public static void main(String[] args){
 	        //Account a = new Account // we can't create variable of this because of abstract method
-	        CurrentAccount ca = new CurrentAccount();
+			//  CurrentAccount ca = new CurrentAccount();
+	        Account ca = new CurrentAccount();
 	        ca.deposit(10000);
 	        ca.withdraw(1000);
 	    }
@@ -23,6 +24,10 @@ public abstract class Account {
 
 //1. if there is a abstract method within class then the class must be defined as abstract
 //2. we can't create object of abstract method
+//3. the child class of the abstract class must override all the abstract methods of parent class.
+// definition : showing the functionality and hiding the implementation
+//4. else define the child class
+//Why?
 
 class CurrentAccount extends Account{
   int creaditLimit = 50000;
